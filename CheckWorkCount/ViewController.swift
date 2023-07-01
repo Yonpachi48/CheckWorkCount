@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet var clearButton: UIButton!
     @IBOutlet var countLabel: UILabel!
     
-    var count: Int = 0
+    var count: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +28,11 @@ class ViewController: UIViewController {
         clearButton.layer.cornerRadius = 10
         
         print(countLabel.text ?? "")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        count = 0
     }
     
     // tapButtonが押された時の処理

@@ -54,7 +54,7 @@
                         <outlet property="clearButton" destination="vU9-sw-3vG" id="4Uh-Wo-Byq"/>
                         <outlet property="countLabel" destination="6IJ-1t-pyo" id="GpL-qJ-tjk"/>
                         <outlet property="tapButton" destination="YkR-3s-bOd" id="Dxd-vp-tVf"/>
-                        <segue destination="Nqx-RL-MA6" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="Zf7-EX-8x1"/>
+                        <segue destination="Nqx-RL-MA6" kind="presentation" identifier="toEndViewController" animates="NO" modalPresentationStyle="fullScreen" id="Zf7-EX-8x1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
