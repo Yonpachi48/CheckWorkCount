@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Nqx-RL-MA6">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -53,11 +54,64 @@
                         <outlet property="clearButton" destination="vU9-sw-3vG" id="4Uh-Wo-Byq"/>
                         <outlet property="countLabel" destination="6IJ-1t-pyo" id="GpL-qJ-tjk"/>
                         <outlet property="tapButton" destination="YkR-3s-bOd" id="Dxd-vp-tVf"/>
+                        <segue destination="Nqx-RL-MA6" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="Zf7-EX-8x1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="20.610687022900763" y="3.5211267605633805"/>
+        </scene>
+        <!--End View Controller-->
+        <scene sceneID="wCU-z7-qfm">
+            <objects>
+                <viewController id="Nqx-RL-MA6" customClass="EndViewController" customModule="CheckWorkCount" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="k1h-h7-hM0">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dct-rA-VVE">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fH9-c9-uMa">
+                                        <rect key="frame" x="163" y="200" width="67" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LNF-8d-ALR">
+                                        <rect key="frame" x="132" y="623" width="129" height="54"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Back"/>
+                                        <connections>
+                                            <action selector="backButtonTapped:" destination="Nqx-RL-MA6" eventType="touchUpInside" id="YgY-Kh-kgF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.22745099660000001" green="0.5176470876" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="fH9-c9-uMa" firstAttribute="top" secondItem="dct-rA-VVE" secondAttribute="top" constant="200" id="6v6-eD-sMm"/>
+                                    <constraint firstItem="fH9-c9-uMa" firstAttribute="centerX" secondItem="dct-rA-VVE" secondAttribute="centerX" id="UFN-vd-DR3"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YcC-Sd-7hj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dct-rA-VVE" firstAttribute="top" secondItem="k1h-h7-hM0" secondAttribute="top" id="PFX-4S-yEx"/>
+                            <constraint firstAttribute="bottom" secondItem="dct-rA-VVE" secondAttribute="bottom" id="R5f-LA-QlO"/>
+                            <constraint firstItem="dct-rA-VVE" firstAttribute="leading" secondItem="YcC-Sd-7hj" secondAttribute="leading" id="btA-kt-i1Z"/>
+                            <constraint firstItem="dct-rA-VVE" firstAttribute="trailing" secondItem="YcC-Sd-7hj" secondAttribute="trailing" id="qHm-w0-1LO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="LNF-8d-ALR" id="Wcw-3z-yA8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CkH-8v-1Dx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="835.87786259541986" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>

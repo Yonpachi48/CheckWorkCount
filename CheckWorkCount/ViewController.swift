@@ -21,23 +21,6 @@ class ViewController: UIViewController {
     
     var count: Int = 0
     
-    
-    
-    @IBAction func tapbutton(_ sender: Any){
-        
-        count = count + 1
-        countLabel.text = String(count)
-        
-    }
-    
-    @IBAction func clearbutton(_ sender:Any){
-        
-        count = 0
-        countLabel.text = String(count)
-    }
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -50,6 +33,7 @@ class ViewController: UIViewController {
     // tapButtonが押された時の処理
     // countに1を足してchangeColor関数を呼び出す
     // countLabeにcountを入れて表示
+    // 応用：countが20になったらEndViewControllerに画面遷移する
     
     
     
