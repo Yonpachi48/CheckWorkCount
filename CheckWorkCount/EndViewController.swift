@@ -20,6 +20,9 @@ class EndViewController: UIViewController {
     
     // backButtonが押された時の処理
     // viewControllerに戻る
+    @IBAction func backButtonTapped() {
+        self.dismiss(animated: false)
+    }
     
 
 }
